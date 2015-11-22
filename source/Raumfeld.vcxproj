@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DD759882-F900-451E-B690-BB4B8D61470C}</ProjectGuid>
+    <RootNamespace>Raumfeld</RootNamespace>
+    <ProjectName>RaumfeldKernel</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <TargetName>raumkern</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <TargetName>raumkern</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Packages\ohNet_x86_1_1_1429_VC13\Debug\include\ohnet;D:\Packages\rapidxml_1_0_0;D:\Packages\boost_1_57_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ohNetCore.lib;ohNetProxies.lib;ohNetDevices.lib;Ws2_32.lib;Dbghelp.lib;Iphlpapi.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_program_options-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_thread-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_date_time-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_regex-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_system-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_filesystem-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_chrono-vc120-mt-gd-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_signals-vc120-mt-gd-1_57.lib;D:\Packages\cpp-netlib-0.11.1-final\cpp-netlib-build\libs\network\src\Debug\cppnetlib-uri.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Packages\ohNet_x86_1_1_1429_VC13\Debug\lib;D:\Packages\boost_1_57_0\lib32-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AssemblyDebug>
+      </AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Packages\ohNet_x86_1_1_1429_VC13\Release\include\ohnet;D:\Packages\rapidxml_1_0_0;D:\Packages\boost_1_57_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ohNetCore.lib;ohNetProxies.lib;ohNetDevices.lib;Ws2_32.lib;Dbghelp.lib;Iphlpapi.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_program_options-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_thread-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_date_time-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_regex-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_system-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_filesystem-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_chrono-vc120-mt-1_57.lib;D:\Packages\boost_1_57_0\stage\lib\libboost_signals-vc120-mt-1_57.lib;D:\Packages\cpp-netlib-0.11.1-final\cpp-netlib-build\libs\network\src\Release\cppnetlib-uri.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Packages\boost_1_57_0\lib32-msvc-12.0;D:\Packages\ohNet_x86_1_1_1429_VC13\Release\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ContentManager.cpp" />
+    <ClCompile Include="DeviceManager.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="ManagerList.cpp" />
+    <ClCompile Include="MediaBrowser.cpp" />
+    <ClCompile Include="MediaItem.cpp" />
+    <ClCompile Include="MediaServer.cpp" />
+    <ClCompile Include="proxies\CpUpnpOrgAVTransport_RaumfeldVirtual1Std.cpp" />
+    <ClCompile Include="proxies\CpUpnpOrgConnectionManager_RaumfeldVirtual1Std.cpp" />
+    <ClCompile Include="proxies\CpUpnpOrgContentDirectory1.cpp" />
+    <ClCompile Include="proxies\CpUpnpOrgContentDirectory_Raumfeld1Std.cpp" />
+    <ClCompile Include="proxies\CpUpnpOrgRenderingControl_RaumfeldVirtual1Std.cpp" />
+    <ClCompile Include="Raumkern.cpp" />
+    <ClCompile Include="RaumkernObject.cpp" />
+    <ClCompile Include="RaumkernSignal.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="urlcpp\Path.cpp" />
+    <ClCompile Include="urlcpp\Url.cpp" />
+    <ClCompile Include="WebServer.cpp" />
+    <ClCompile Include="WebServerResponseHandler.cpp" />
+    <ClCompile Include="ZoneManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ContentManager.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="DeviceManager.h" />
+    <ClInclude Include="MediaBrowser.h" />
+    <ClInclude Include="MediaItem.h" />
+    <ClInclude Include="proxies\CpUpnpOrgContentDirectory1.h" />
+    <ClInclude Include="WebServer.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="ManagerList.h" />
+    <ClInclude Include="MediaServer.h" />
+    <ClInclude Include="os.h" />
+    <ClInclude Include="proxies\CpUpnpOrgAVTransport_RaumfeldVirtual1.h" />
+    <ClInclude Include="proxies\CpUpnpOrgConnectionManager_RaumfeldVirtual1.h" />
+    <ClInclude Include="proxies\CpUpnpOrgContentDirectory_Raumfeld1.h" />
+    <ClInclude Include="proxies\CpUpnpOrgRenderingControl_RaumfeldVirtual1.h" />
+    <ClInclude Include="Raumkern.h" />
+    <ClInclude Include="RaumkernObject.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="urlcpp\Path.h" />
+    <ClInclude Include="urlcpp\Url.h" />
+    <ClInclude Include="WebServerResponseHandler.h" />
+    <ClInclude Include="webserver\client_http.hpp" />
+    <ClInclude Include="webserver\server_http.hpp" />
+    <ClInclude Include="ZoneManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\raumKernelHistory.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

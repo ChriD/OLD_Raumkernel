@@ -1,0 +1,44 @@
+#RaumKernel Version History File
+
+# 0.1.10.98 ()
+ - fixed a crash if zone manager is closed without having a long polling running
+ - Enabled Cross-origin policy
+ - renamed fault filenames to be compatible with linux
+
+
+# 0.1.10.97 (21.03.2015)
+ - fixed WebServer, not closing session issue
+ - fixed Crash when avTransportUri gets empty!
+ - fixes wait time init value for some architectures
+ - fixed "play" request with track number to work proper
+
+
+# 0.1.10.96 (07.03.2015)
+ - fixed Bug on zoneRequest when loosing and reestabling host
+ - fixed Bug on zoneRequest when getting wrong written updateId
+ - addes some further JSON requests
+
+
+# 0.1.10.95 (28.02.015)
+ - fixed request error on "volumeChange" with negative values
+ - fixed "wakeUptimer" lock (wake up timer was corrupt!)
+ - added kernel for json requests (internal)
+ - added base version of content management browsing (internal)
+ - stability improvements
+
+
+# 0.1.10.94 (16.02.2015)
+ - fixed Code which causes Segmentation fault on renderer reboot
+
+
+# 0.1.10.93 (15.02.2015)
+ - redesigned request methods to remove dependencies of netlib-cpp server and client libs (uri lib will stay)
+ - removed some compiler warnings
+ - improvements for ARM Hardware
+ - fixed code which could cause Segmentation fault due not locking internal list when working on it
+ - minor fixes 
+ - reduced CPU usage when idle
+
+
+# 0.1.10.92 (06.02.2015)	ReleaseCandidate - InitialVersion / RaumfeldVersion 1.42.8   
+ - initial version
